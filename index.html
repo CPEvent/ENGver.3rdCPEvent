@@ -174,7 +174,7 @@
 
     let fallingWords = [];
     let timerInterval, dropInterval, startTime;
-    let totalWords = 25;
+    let totalWords = 20;
     let typedCount = 0;
     let gameEnded = false;
     let fallSpeed = 1.5;
@@ -208,7 +208,7 @@
     }
 
     function updateCounter() {
-      wordCounter.textContent = `${typedCount} / ${totalWords}개`;
+      wordCounter.textContent = `${typedCount} / ${totalWords}words`;
     }
 
     function checkInput(input) {
@@ -272,7 +272,7 @@
         startTime = Date.now();
         timerInterval = setInterval(() => {
           const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);
-          document.getElementById("timer").innerText = `${elapsed}초`;
+          document.getElementById("timer").innerText = `${elapsed}sec`;
         }, 100);
       });
     }
